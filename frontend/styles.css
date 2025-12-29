@@ -1,16 +1,16 @@
 :root {
-    /* MATHICAL EXACT THEME & METRICS */
+  
     --bg-dark: #050505;
     --text-primary: #000000;
 
-    /* Measured Colors */
+    
     --mathical-pink: #f67adf;
     --mathical-blue: #504bef;
     --mathical-cream: #fff4c4;
     --mathical-lime: #e0ef4a;
     --mathical-orange: #ffb249;
 
-    /* Typography */
+    
     --font-heading: 'Space Grotesk', sans-serif;
     --font-body: 'Outfit', sans-serif;
 }
@@ -28,7 +28,7 @@ body {
     overflow-x: hidden;
 }
 
-/* Header */
+
 header {
     position: relative;
     top: 0;
@@ -68,7 +68,7 @@ header {
 .btn-blue {
     background: var(--mathical-blue);
     color: #e0ef4a;
- 
+
 }
 
 .btn-pink {
@@ -85,7 +85,7 @@ header {
     transform: scale(1.05);
 }
 
-/* Hero Section */
+
 .hero-wrapper {
     padding-top: 160px;
     max-width: 100%;
@@ -102,8 +102,7 @@ header {
     position: absolute;
     width: 800px;
     height: 800px;
-    background: #504bef;
-    border-radius: 50%;
+    background: radial-gradient(red) border-radius: 50%;
     filter: blur(150px);
     opacity: 0.35;
     z-index: -1;
@@ -148,7 +147,7 @@ header {
     margin-bottom: 10px;
 }
 
-/* Shapes Row */
+
 .shapes-row {
     display: flex;
     gap: 0;
@@ -239,12 +238,12 @@ header {
     border-radius: 999px;
 }
 
-/* Projects Section */
+
 .projects-section-wrapper {
     width: 100%;
     height: 130vh;
     position: relative;
-    background: var(--mathical-blue);
+    background: rgb(30, 31, 36), ;
     border-radius: 60px 60px 0 0;
     z-index: 20;
     margin-bottom: 0;
@@ -258,12 +257,16 @@ header {
     flex-direction: column;
     justify-content: center;
     padding-left: 5vw;
+    background: radial-gradient(circle at top,
+            rgb(30, 31, 36),
+            rgb(26, 22, 22));
 }
 
 .projects-horizontal-track {
     display: flex;
     gap: 4vw;
     width: max-content;
+
 }
 
 .project-card {
@@ -276,6 +279,7 @@ header {
     justify-content: space-between;
     flex-shrink: 0;
     transition: transform 0.3s;
+
 }
 
 .project-card:hover {
@@ -304,14 +308,18 @@ header {
 
 /* Overlap Cards */
 .overlap-card {
-    background: greenyellow;
-    color: black;
+    background: radial-gradient(circle at top,
+            rgb(38, 38, 41),
+            rgb(67, 63, 63));
+
+    color: rgb(0, 0, 0);
     border-radius: 60px 60px 0 0;
     padding: 80px 40px;
     margin-top: 0;
     position: relative;
-    z-index: 10;
+    z-index: 0;
 }
+
 
 .fixed-section {
     position: fixed;
@@ -324,13 +332,13 @@ header {
     background: inherit;
 }
 
-/* Tech Stack Marquee */
+
 .marquee-container {
     width: 100%;
     overflow: hidden;
     white-space: nowrap;
     position: relative;
-    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    mask-image: linear-gradient(to right, transparent, rgb(237, 0, 0) 10%, black 90%, transparent);
 }
 
 .marquee-content {
@@ -354,7 +362,7 @@ header {
     }
 }
 
-/* CTA Section */
+
 .cta-section {
     position: relative;
     background: #000;
@@ -445,7 +453,7 @@ header {
     z-index: 2;
 }
 
-/* Footer */
+
 .site-footer {
     background: linear-gradient(135deg, #504bef, #8e44ad);
     color: rgb(255, 255, 255);
@@ -478,7 +486,7 @@ header {
     opacity: 1;
 }
 
-/* Animations */
+
 @keyframes spin {
     100% {
         transform: rotate(360deg);
@@ -491,8 +499,44 @@ header {
     }
 }
 
-/* Mobile */
+
 @media (max-width: 768px) {
+    header {
+        padding: 20px;
+    }
+
+    header svg {
+        width: 400px;
+        height: auto;
+    }
+
+    .header-right {
+        gap: 8px;
+    }
+
+    .pill-btn {
+        font-size: 12px;
+        padding: 10px 20px;
+    }
+
+    .hero-wrapper {
+        padding-top: 120px;
+    }
+
+    .hero-content {
+        padding: 0 20px;
+    }
+
+    .hero-title {
+        font-size: 18vw;
+        letter-spacing: -3px;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+        max-width: 100%;
+    }
+
     .shapes-row {
         height: 220px;
     }
@@ -522,11 +566,235 @@ header {
         height: 160px;
     }
 
-    .hero-title {
-        font-size: 18vw;
+    .projects-section-wrapper {
+        height: 100vh;
     }
 
-    .hero-wrapper {
-        padding-top: 120px;
+    .projects-sticky-container {
+        padding-left: 20px;
+    }
+
+    .projects-horizontal-track {
+        gap: 20px;
+    }
+
+    .project-card {
+        width: 80vw;
+        height: 50vh;
+        padding: 2rem;
+
+    }
+
+    .project-card h3 {
+        font-size: 2rem;
+    }
+
+    .project-card p {
+        font-size: 1rem;
+    }
+
+    .overlap-card {
+        padding: 40px 20px;
+    }
+
+    .overlap-card h2 {
+        font-size: 2.5rem;
+        max-width: 100%;
+    }
+
+    .overlap-card ul {
+        font-size: 1.2rem;
+        padding-left: 1rem;
+    }
+
+    .marquee-content span {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .cta-section {
+        padding: 20px;
+    }
+
+    .cta-watermark {
+        font-size: 10vw;
+        margin-bottom: 40px;
+    }
+
+    .cta-content {
+        gap: 2rem;
+    }
+
+    .cta-actions {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .cta-btn-main {
+        font-size: 2rem;
+        padding: 1.5rem 2rem;
+    }
+
+    .cta-btn-arrow {
+        width: 80px;
+        height: 80px;
+        font-size: 2rem;
+    }
+
+    .cta-info {
+        top: 20px;
+        left: 20px;
+        max-width: 200px;
+        font-size: 0.9rem;
+    }
+
+    .site-footer {
+        padding: 2rem;
+        margin: 10px;
+        font-size: 1rem;
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 1rem;
     }
 }
+
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    header {
+        padding: 25px 30px;
+    }
+
+    header svg {
+        width: 500px;
+        height: auto;
+    }
+
+    .pill-btn {
+        font-size: 13px;
+        padding: 11px 24px;
+    }
+
+    .hero-content {
+        padding: 0 30px;
+    }
+
+    .hero-title {
+        font-size: 10vw;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+        max-width: 500px;
+    }
+
+    .shapes-row {
+        height: 300px;
+    }
+
+    .s1-blue {
+        width: 140px;
+        height: 260px;
+    }
+
+    .s2-cream {
+        width: 240px;
+        height: 240px;
+    }
+
+    .s3-lime {
+        width: 190px;
+        height: 220px;
+    }
+
+    .s4-orange {
+        width: 110px;
+        height: 190px;
+    }
+
+    .s5-flower {
+        width: 200px;
+        height: 200px;
+    }
+
+    .projects-sticky-container {
+        padding-left: 30px;
+    }
+
+    .project-card {
+        width: 60vw;
+        height: 55vh;
+        padding: 2.5rem;
+    }
+
+    .overlap-card {
+        padding: 60px 30px;
+    }
+
+    .overlap-card h2 {
+        font-size: 3rem;
+    }
+
+    .marquee-content span {
+        font-size: 1.3rem;
+        padding: 0.8rem 1.5rem;
+    }
+
+    .cta-watermark {
+        font-size: 12vw;
+    }
+
+    .cta-btn-main {
+        font-size: 2.5rem;
+        padding: 1.8rem 3rem;
+    }
+
+    .cta-btn-arrow {
+        width: 100px;
+        height: 100px;
+        font-size: 2.5rem;
+    }
+
+    .site-footer {
+        padding: 3rem;
+        margin: 15px;
+        font-size: 1.1rem;
+    }
+}
+
+
+@media (min-width: 1025px) {
+
+    
+    .hero-title {
+        font-size: 11vw;
+    }
+
+    .shapes-row {
+        height: 340px;
+    }
+
+    .project-card {
+        width: 70vw;
+        height: 60vh;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
